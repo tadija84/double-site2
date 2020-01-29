@@ -1,0 +1,898 @@
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body{
+  width: 100vw;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: myFont;
+  src: url(./materijal/Roboto-Black.ttf);
+}
+#burgerMenu{
+  display: none;
+  background-image: url(./materijal/burgerMenu.png);
+  position: fixed; 
+  background-position: center;
+  background-size: 15vw 15vw;
+  width: 15vw;
+  height: 15vw;
+  right: 0;
+  top: 0;
+}
+header {
+  width: 100vw;
+  height: 8vh;
+  z-index: 8;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+ padding-left: 8vw;
+ padding-right: 8vw;
+}
+#tabs{
+  width: 86vw;
+  height: 8vh;
+  display: grid;
+  grid-template-columns: 12vw 6vw 22vw 8vw 6vw 12vw 8vw 8vw 4vw;
+  margin: 0;
+}
+#firstLogo{
+  background-image: url(./materijal/headline1.png);
+  background-size: 12vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: white;
+}
+#secondLogo{
+  background-image: url(./materijal/headlineDkitlogo1.png);
+  background-size: 3vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  background-color: white;
+}
+#thirdLogo{
+  background-image: url(./materijal/dkit2.png);
+  background-size: 5.6vw;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: white;
+}
+#thirdLogo:hover{
+background-image: url(./materijal/Dkit.png);
+cursor: pointer;
+}
+#linkNaslovna,#linkONama,#linkUsluge,#linkKlijenti,#linkKontakt,#linkEngleski{
+text-align: center;
+padding-top: 2vh;
+font-size: 0.9em;
+background-color: #fff;
+z-index: 9;
+font-weight: 800;
+}
+#linkNaslovna:hover,#linkONama:hover,#linkUsluge:hover,#linkKlijenti:hover,#linkKontakt:hover,#linkEngleski:hover{
+background-color:#a31b00;
+color: white;
+  }
+a:link,a:visited  {
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: white;
+}
+
+main {
+  display: block;
+  width: 100%;
+}
+#wraper {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100vw;
+  background-image: url(./1633.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: center;
+  padding-top: 8vh;
+  margin: 0;
+  
+}
+#naslovna {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(250, 235, 232, 0.7);
+  background-repeat: no-repeat;
+  background-size: contain; 
+  margin: 0;
+  
+}
+#bigWrap{
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./materijal/header2.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-position: 50% 50%;
+}
+#smallWrap {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./materijal/header1.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-position: 50% 50%;
+}
+
+#movingPart {
+  position: relative;
+  width: 90vw;
+  margin-top: -60vh;
+  min-height: 70vh;
+ /* color: #a31b00;
+  position: absolute;
+  width: 70vw;
+  left:15vw;
+  height: 20vh;
+  margin-top: 65vh;
+  top: 0;
+  text-align: center;
+  font-weight: 900;
+  padding:0 6vw;
+  background-image: url(./materijal/textbackround.png);
+  background-size: 70vw 20vh;
+  background-position: center;
+  background-repeat: no-repeat;*/
+}
+
+.container { 
+  position: relative;
+  margin:150px auto; width:1000px;}
+
+.poster-main {
+  width: 1000px;
+  height: 500px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.poster-main a, .poster-main img { display: block; }
+
+.poster-main .poster-list {
+  width: 1000px;
+  height: 500px;
+}
+
+.poster-main .poster-list .poster-item {
+  width: 200px;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: solid black 1px;
+  background-color: rgba(241, 205, 205, 0.9);
+}
+
+.poster-main .poster-btn {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.poster-main .poster-prev-btn {
+  left: 0;
+  background: url(./img/left.png) no-repeat center center;
+}
+
+.poster-main .poster-next-btn {
+  right: 0;
+  background: url(./img/right.png) no-repeat center center;
+}
+#movingPart p{
+  width: 50vw;
+  color: white;
+  padding: 0;
+  font-size: 1.5em;
+}
+#movingPart h1,
+#movingPart p {
+  width: 100%;
+}
+#textTitle {
+  font-family: myFont;
+  font-size: 3em;
+  height: 12vh;
+  border-bottom: solid #a31b00 4px;
+  margin-bottom: 3vh;
+  font-weight: 900 !important;
+}
+#oNama {
+  display: grid;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 50vw 50vw;
+  color: #a31b00;
+}
+#oNama{
+  color: #a31b00;
+}
+#aboutText{
+  display: block;
+  justify-content: space-around;
+  padding-left: 8vw;
+  
+}
+#aboutWrap{
+  width: 37vw;
+  height: 70vh;
+  display: grid;
+  justify-content: space-between;
+  color: black;
+}
+#aboutWrap h1{
+ margin-top: 10vh;
+margin-bottom: 5vh;
+border-bottom: solid 3px #a31b00;
+border-collapse: separate;
+border-spacing: 50px !important;
+}
+#aboutWrap h1::after{
+  content: "";
+  bottom: -30px;
+}
+#aboutWrap p{
+  margin-bottom: 5vh;
+}
+#numberCounter{
+  display: grid;
+  height: 90vh;
+  align-items: center;
+  width: 50vw;
+  font-size: 1.5em;
+  text-align: center;
+  background-image: url(./materijal/aboutUsBackground.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#countsWrap{
+  width: 50vw;
+  height: 90vh;
+  background-color: rgba(163,27,0,0.7);
+}
+#numbsWrap{
+  color: white;
+  width: 70%;
+  height: 40vh;
+  text-align: right;
+  margin-top: 30vh;
+}
+#numCount{
+  font-size: 3em;
+}
+#countFirstLine {
+  font-size: 0.9em;
+}
+#countLastLine{
+font-size: 1.5em;
+}
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+@keyframes fadeOut {
+  from {opacity: 1}
+  to {opacity: 0}
+}
+#usluge {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "left main right";
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+#uslugeHed {
+  margin: 8vh 0 0;
+  grid-area: header;
+  height: 10vh;
+  color: #a31b00;
+}
+#leftArrow { 
+  grid-area: left;
+  width: 5vw;
+  height: 40vh;
+  background-image: url(./materijal/strelicaLevo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 2vw 10vh;
+  background-position: 0 12vh;
+}
+#rightArrow {
+  width: 5vw;
+  height: 40vh;
+  background-image: url(./materijal/strelicaDesno.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 2vw 10vh;
+  background-position: 0 12vh;
+}
+
+#sliderDiv {
+  grid-area: main;
+ 
+  width: 70vw;
+  height: 40vh;
+}
+#slideWrap{
+  display: grid; 
+  grid-template-areas:
+  "headPic headPic headPic headPic lastHeadPic"
+  "divPic divPic divPic divPic lastDivPic";
+  grid-column-gap: 1.4vw;
+}
+.picTitle{
+  font-size: 1em;
+  margin-bottom: 0;
+  height: 3vh;
+}
+#lastPicTitle{
+  height: 3vh;
+  width: 4vw;
+  content: "5"
+}
+.oneSliderDiv {
+  height: 15vw;
+  width: 15vw;
+  margin-top: 0vh;
+}
+
+.oneSliderDiv:hover{
+} 
+#firstPicDiv,#secondPicDiv,#thirdPicDiv,#fourthPicDiv,#lastPicDiv{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#firstPicDiv {
+  background-image: url(./materijal/slikeProjekata1.png);
+}
+#secondPicDiv {
+  background-image: url(./materijal/slikeProjekata2.png);
+}
+#thirdPicDiv {
+  background-image: url(./materijal/slikeProjekata3.png);
+}
+#fourthPicDiv {
+  background-image: url(./materijal/slikeProjekata4.png);
+}
+#lastPicDiv {
+  background-size: cover;
+  background-image: linear-gradient(to right, transparent, white),
+    url(./materijal/slikeProjekata5.png);
+    width: 4vw;
+}
+#rekliSu {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  background-image: url(./materijal/aboutUsBackground.jpg);
+  background-size: cover;
+  background-position: 0 -30vh;
+}
+#rekliSuCont {
+  display: grid;
+  grid-template-rows: 15vh 35vh;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(163,27,0,0.7);
+  color: white;
+}
+#quotesHeader{
+  padding-top: 5vh;
+  margin-left: 8vw;
+}
+#randomQuote {
+  display: grid;
+  grid-template-rows: 23vh 12vh;
+  grid-template-columns: 75vw;
+  z-index: 5;
+  margin:0 auto;
+}
+#quoteText {
+  display: grid;
+  background-image: url(./materijal/quotationBorder.png);
+  background-size: 400px 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2vw;
+  width: 400px;
+  margin:0 auto;
+  justify-content: center;
+  align-items: center;
+}
+#quoteAutor{
+  margin:0 auto;
+}
+#klijenti {
+  display: block;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  color: #a31b00;
+}
+#klijentiNaslov{
+  text-align: left;
+  margin-left: 8vw;
+  margin-bottom: 5vh;
+}
+#clientsWrap{
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+#clientsContainer {
+  display: grid;
+  grid-column-gap: auto;
+  grid-row-gap: 25px;
+  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: space-between;
+}
+.oneClient {
+  font-size: 30px;
+  text-align: center;
+  width: 15vw;
+  height: 10vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: grayscale(100%);
+}
+#client1 {
+  background-image: url(./logoiKlijenata/1.png);
+}
+#client2 {
+  background-image: url(./logoiKlijenata/2.png);
+}
+#client3 {
+  background-image: url(./logoiKlijenata/3.png);
+}
+#client4 {
+  background-image: url(./logoiKlijenata/4.png);
+}
+#client5 {
+  background-image: url(./logoiKlijenata/5.png);
+}
+#client6 {
+  background-image: url(./logoiKlijenata/6.png);
+}
+#client7 {
+  background-image: url(./logoiKlijenata/7.png);
+}
+#client8 {
+  background-image: url(./logoiKlijenata/8.png);
+}
+#client9 {
+  background-image: url(./logoiKlijenata/9.png);
+}
+#client10 {
+  background-image: url(./logoiKlijenata/10.png);
+}
+#client11 {
+  background-image: url(./logoiKlijenata/11.png);
+}
+#client12 {
+  background-image: url(./logoiKlijenata/12.png);
+}
+#client13 {
+  background-image: url(./logoiKlijenata/13.png);
+}
+#client14 {
+  background-image: url(./logoiKlijenata/14.png);
+}
+#client15 {
+  background-image: url(./logoiKlijenata/15.png);
+}
+#client16 {
+  background-image: url(./logoiKlijenata/16.png);
+}
+#client17 {
+  background-image: url(./logoiKlijenata/17.png);
+}
+#client18 {
+  background-image: url(./logoiKlijenata/18.png);
+}
+#client19 {
+  background-image: url(./logoiKlijenata/19.png);
+}
+#client20 {
+  background-image: url(./logoiKlijenata/20.png);
+}
+.clientCont {
+  width: 100%;
+  height: 100%;
+}
+.oneClient:hover {
+  filter: grayscale(0%);
+}
+
+#bigPic {
+  display: none;
+  position: fixed; 
+  z-index: 10;
+  padding-top: 10px; 
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  margin: 0;
+  padding-left:5vw;
+}
+#bigPicWrap {
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70vw;
+  height: 100vh;
+  z-index: 9;
+  margin:0 20vw ;
+}
+#slideArrowLeft{
+  position: absolute;
+  top: 45vh;
+  left: 8vw;
+  z-index: 9;
+  background-image: url(./materijal/strelicaLevo.png);
+  width: 10vw;
+  height: 40vh;
+  background-size: 5vw;
+  background-repeat: no-repeat;
+}
+#slideArrowRight{
+  position: absolute;
+  top: 45vh;
+  right: 8vw;
+  z-index: 9;
+  background-image: url(./materijal/strelicaDesno.png);
+  width: 10vw;
+  height: 40vh;
+  background-size: 5vw;
+  background-repeat: no-repeat;
+}
+#close {
+  color: #a31b00;
+  float: right;
+  margin-right: 20vw;
+  font-size: 4em;
+  font-weight: bold;
+  z-index: 9;
+}
+
+#close:hover,
+#close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+#kontakt {
+  display: block;
+  position: relative;
+  width: 100vw;
+  min-height: 120vh;
+  background-color: rgb(163, 27, 0);
+  padding-top: 5vh;
+}
+#contactWrap{
+  margin-left: 8vw;
+  width: 84vw;
+  height: 84vh;
+  display: grid;
+  grid-template-columns: 25vw 59vw;
+}
+#contactDatas{
+  height: 84vh;
+  display: block;
+  color: white;
+  font-size: 0.8em;
+} 
+#contactDatas>div, #contactText, #headlineText{
+  margin-top: 5vh;
+}
+#headlineText{
+  font-size: 1.5em;
+}
+#mailText, #adressText, #phoneText{
+  font-weight: 400;
+}
+#mailMail, #adressAdress,#adressCode, #phoneNumb{
+  font-weight: 900;
+}
+#mapWrap{
+  margin-top: 13vh;
+  height: 45vw;
+  margin-left: 15vw;
+  
+}
+#mapWrap iframe{
+  width: 45vw;
+  height: 30vw;
+  outline: 3px gray solid;
+}
+
+@media only screen and (max-width: 950px) {
+  #tabs{
+    display: grid;
+    grid-template-columns: 12vw 6vw 15vw 8vw 8vw 15vw 10vw 8vw 4vw;
+  }
+  #linkNaslovna,#linkONama,#linkUsluge,#linkKlijenti,#linkKontakt,#linkEngleski{
+    font-size: 0.8em;
+    font-weight: 800;
+    }
+ 
+  #aboutWrap{
+    font-size: 0.9em;
+  }
+  #aboutWrap h1{
+    margin-top: 5vh;
+   }
+ 
+}
+@media only screen and (max-width: 680px){
+  #tabs{
+    grid-template-columns: 10vw 6vw 15vw 8vw 8vw 17vw 12vw 8vw 4vw;
+    font-size: 0.8em;
+  }
+  #aboutWrap{
+    font-size: 0.8em;
+    margin-bottom: 4vh;
+  }
+  #aboutWrap h1{
+    margin-top: 4vh;
+  }
+  #movingPart {
+    position: absolute;
+    width: 350px;
+    margin: 65vh auto 0;
+    text-align: center;
+    font-weight: 900;
+    padding: 0 3vw;
+  }
+}
+@media only screen and (max-width: 460px){
+  #burgerMenu{
+    display: block;
+    z-index: 15;
+  }
+  header{
+    display: none;  
+  }
+  #tabs{
+    display: none;
+    width: 100vw;
+    grid-template-areas: 
+    "firstLogo firstLogo firstLogo secondLogo thirdLogo thirdLogo thirdLogo"
+    "naslovna naslovna naslovna naslovna naslovna naslovna naslovna"
+    "oNama oNama oNama oNama oNama oNama oNama"
+    "usluge usluge usluge usluge usluge usluge usluge"
+    "klijenti klijenti klijenti klijenti klijenti klijenti klijenti"
+    "kontakt kontakt kontakt kontakt kontakt kontakt kontakt"
+    "engleski engleski engleski engleski engleski engleski engleski";
+    /*grid-template-columns: none;
+    grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh ;*/
+    font-size: 1em;
+    margin: 0;
+    left: 0;
+  }
+  #firstLogo{
+    grid-area: firstLogo;
+    width: 45vw;
+    position: relative;
+    float: left;
+    height: 10vh;
+    margin: 0;
+    right: 10vw;
+    justify-content: center;
+  }
+  #secondLogo{
+    grid-area: secondLogo;
+    width: 10vw;
+    position: relative;
+    height: 10vh;
+    margin: 0;
+    right: 10vw;
+    justify-content: center;
+    float: left;
+  }
+  #thirdLogo{
+    grid-area: thirdLogo;
+    width: 45vw;
+    position: relative;
+    height: 10vh;
+    margin: 0;
+    right: 10vw;
+    justify-content: center;
+    float: left;
+    background-position: center;
+  }
+  #linkNaslovna{
+    grid-area: naslovna;
+  }
+  #linkONama{
+    grid-area: oNama;
+  }
+  #linkUsluge{
+    grid-area:usluge
+  }
+  #linkKlijenti{
+    grid-area:klijenti
+  }
+  #linkKontakt{
+    grid-area: kontakt
+  }
+  #linkEngleski{
+    grid-area: engleski;
+  }
+  #linkNaslovna,#linkONama,#linkUsluge,
+  #linkKlijenti,#linkKontakt,#linkEngleski{
+    clear: both;
+    position: relative;
+    width: 100vw;
+    height: 10vh;
+    margin: 0;
+    right: 10vw;
+    justify-content: center;
+  }
+  #wraper{ 
+    padding-top: 0;
+ }
+  #movingPart {
+    position: absolute;
+    width: 100vw;
+    background-size: 100vw 20vh;
+    left: 0;
+    font-size: 0.9em;
+    padding:0 5vw;
+  }
+  #oNama{
+    display: block;
+    min-height: 160vh;
+  }
+  #aboutText{
+    display: block;
+    justify-content: space-around;
+    margin-left: 2vw; 
+  }
+  #aboutWrap{
+    width: 100%;
+    min-height: 70vh;
+    padding: 3vw;
+    display: grid;
+    justify-content: space-between;
+    color: black;
+  }
+  #numberCounter{
+    width: 100vw;
+    font-size: 1.5em;
+  }
+  #countsWrap{
+    width: 100vw;
+    height: 90vh;
+    background-color: rgba(163,27,0,0.7);
+  }
+  #numbsWrap{
+    color: white;
+    width: 70%;
+    height: 40vh;
+    text-align: right;
+    margin-top: 30vh;
+  }
+  #slideWrap{
+    grid-template-areas:
+    "headPic headPic "
+    "divPic divPic ";
+    grid-column-gap: 1vw;
+  }
+  #thirdPicTitle,#fourthPicTitle,#lastPicTitle,#thirdPicDiv,#fourthPicDiv,#lastPicDiv{
+    display: none;
+  }
+  .oneSliderDiv {
+    height: 30vw;
+    width: 30vw;
+    margin: 5vh auto;
+  }
+  #randomQuote{
+    margin-left: 10vw;
+  }
+  #clientsContainer {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto ;
+    justify-content: space-evenly;
+  }
+  .oneClient {
+    font-size: 30px;
+    text-align: center;
+    width: 25vw;
+    height: 15vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: grayscale(0);
+  }
+  #contactWrap{
+    margin-left: 8vw;
+    width: 84vw;
+    min-height: 84vh;
+    display: block;
+  }
+  #contactDatas{
+    height: 64vh;
+    display: block;
+  } 
+  #mapWrap{
+    margin-top: 0;
+    height: 80vw;
+    height: 40vw;
+    margin-left: 0;
+  }
+  #mapWrap iframe{
+    width:100%;
+    height: 100%;
+  }
+  
+  #quoteText {
+    background-size: 85vw 25vw;
+    width: 85vw;
+    margin:0;
+    font-size: 0.8em;
+  }
+  #quoteAutor{
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 320px){
+  #quoteText {
+    background-size: 85vw 38vw;
+    font-size: 0.7em;
+  }
+  #quoteAutor{
+    font-size: 0.7em;
+  }
+  #secondPicTitle, #secondPicDiv{
+    display: none;
+  }
+  #slideWrap{
+    grid-template-areas:
+    "headPic "
+    "divPic";
+    grid-column-gap: 1vw;
+  }
+  .oneSliderDiv {
+    height: 50vw;
+    width: 50vw;
+    margin: 5vh auto;
+  }
+}
