@@ -147,8 +147,8 @@ main {
   width: 100vw;
   margin-top: -60vh;
   min-height: 70vh;
-  border: solid green 2px;
- /* color: #a31b00;
+ /*  border: solid green 2px;
+ color: #a31b00;
   position: absolute;
   width: 70vw;
   left:15vw;
@@ -171,7 +171,6 @@ ul { list-style: none; }
   height: 50vh;
   position: relative;
   margin: 0 auto;
-  border: solid green 2px;
 }
 
 .poster-main img { display: block; }
